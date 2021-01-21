@@ -21,8 +21,8 @@ The premise of this project follows that Magic-Books Inc (a fictional company), 
 
 ### Setup
 As this is the first milestone of the project, there is little you can do with this project. That being said, if you wish to run the project locally on your machine and see what the app holds so far, complete the following steps:
-  1. (Download this repository directly,)[https://github.com/Psiale/react-redux-bookstore/archive/feature/first-milestone.zip] or (clone)[https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository] this repository using the green 'Code' button at the top of this page.
-  2. Once you have this repository downloaded,  (`cd`)[https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10/] into the root of the downloaded repository via your terminal.
+  1. [Download this repository directly](https://github.com/Psiale/react-redux-bookstore/archive/feature/first-milestone.zip) or [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository using the green 'Code' button at the top of this page.
+  2. Once you have this repository downloaded,  [`cd`](https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10/) into the root of the downloaded repository via your terminal.
   3. Time to install all the relevant dependencies in order to get the project to run correctly. Enter the following command into your terminal once you are safely sat at the repositories root:
     `npm install`
   This will install all dependencies and should complete without error.
