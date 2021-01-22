@@ -1,31 +1,35 @@
 import React, { connect } from 'react';
+import Book from '../components/Book';
 
 const BooksList = props => {
-  const { id, title, category } = props;
+  const books = props;
   return (
     <table>
-      <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Category</th>
-      </tr>
-      {
-        props.map((book, index) => {
-          <tr id={index}>
-            <th>{id}</th>
-            <th>{title}</th>
-            <th>{category}</th>
-          </tr>;
-        })
-      }
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {books.map(book => (
+          <Book
+            key={book.idBook}
+            book={{
+              idBook: book.idBook,
+              title: book.title,
+              category: book.category,
+            }}
+          />
+        ))}
+      </tbody>
     </table>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    books: state.books,
-  }
-}
+const mapStateToProps = state => ({
+  books: state.books,
+});
 
 export default connect(mapStateToProps, null)(BooksList);
