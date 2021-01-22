@@ -1,11 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import "./index.css";
+import store from "store";
+import App from "./App";
+import book from "./classes/book";
+import { getRandomInt } from "utilities";
+const initialState = {
+  books: [
+    book(getRandomInt(1, 999999), "first", "horror"),
+    book(getRandomInt(1, 999999), "second", "sci-fi"),
+    book(getRandomInt(1, 999999), "third", "comedy"),
+  ],
+};
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById("root")
 );
