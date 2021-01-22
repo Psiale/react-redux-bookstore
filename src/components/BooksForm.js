@@ -1,6 +1,3 @@
-import book from '../classes/book';
-import { createBook } from '../actions/bookActions';
-
 const categories = [
   'Action',
   'Biography',
