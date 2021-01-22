@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import "./index.css";
+import './index.css';
 import store from "store";
+import { getRandomInt } from "utilities";
 import App from "./App";
 import book from "./classes/book";
-import { getRandomInt } from "utilities";
+
 const initialState = {
   books: [
     book(getRandomInt(1, 999999), "first", "horror"),
@@ -13,6 +14,7 @@ const initialState = {
     book(getRandomInt(1, 999999), "third", "comedy"),
   ],
 };
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -21,3 +23,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+export { initialState }
