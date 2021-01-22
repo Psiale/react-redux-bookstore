@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 📚 React-Redux Bookstore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/).
 
-## Available Scripts
+Iterating on the previous topics covered in React and most recently Redux, this project sets out with the objective of creating a simple bookstore using React and Redux.
 
-In the project directory, you can run:
+## 🧮 The Project Brief
 
-### `yarn start`
+The premise of this project follows that Magic-Books Inc (a fictional company), has requested our help in creating a front-end application to help them organise and manage their bookstore. We will obtain the objective by building a fast, dynamic and responsive web app using React and Redux.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🧬 Technologies & Languages Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js
+- React
+- Redux
+- NPM
+- SCSS
+- Javascript (ES6)
 
-### `yarn test`
+## 🔰 Setup & Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setup
+As this is the first milestone of the project, there is little you can do with this project. That being said, if you wish to run the project locally on your machine and see what the app holds so far, complete the following steps:
+  1. [Download this repository directly](https://github.com/Psiale/react-redux-bookstore/archive/feature/first-milestone.zip) or [clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository using the green 'Code' button at the top of this page.
+  2. Once you have this repository downloaded,  [`cd`](https://www.howtogeek.com/659411/how-to-change-directories-in-command-prompt-on-windows-10/) into the root of the downloaded repository via your terminal.
+  3. Time to install all the relevant dependencies in order to get the project to run correctly. Enter the following command into your terminal once you are safely sat at the repositories root:
+    `npm install`
+  This will install all dependencies and should complete without error.
+  4. Finally, in order to run the project, punch in the following command to your terminal:
+    `npm start`
+  This will compile and open the project in your browser of choice. Thats it!
 
-### `yarn build`
+## 🛎️ Contributions, Issues & Forking
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you have any issues setting up the project or you come across any unintended bugs or problems, please do submit an issue to the [React-Redux BookStore](https://github.com/Psiale/react-redux-bookstore/issues) page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you want to make your own changes, modifications or improvements to our project, go ahead and Fork it!
+1. [Fork it](https://github.com/Psiale/react-redux-bookstore/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤟🏽😄 😛🤙🏾  Creators
 
-### `yarn eject`
+Alexis Sanchez - [Github](https://github.com/Psiale)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Rory Hellier - [GitHub](https://github.com/Rhelli)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🙌🏾 Show Your Support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
