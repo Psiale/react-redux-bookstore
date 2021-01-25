@@ -22,6 +22,15 @@ const BooksForm = () => {
     setBookCategory(event.target.value);
   };
 
+  const handleSubmit = (state) => {
+    //save to redux state
+    return {
+      ...state,
+      title: '',
+      category: ''
+    }
+  }
+
   return (
     <>
       <form action="">
