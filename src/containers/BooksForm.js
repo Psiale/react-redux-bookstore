@@ -16,7 +16,7 @@ const categories = [
 
 const BooksForm = ({ createBook }) => {
   const [bookTitle, setBookTitle] = useState('');
-  const [bookCategory, setBookCategory] = useState('');
+  const [bookCategory, setBookCategory] = useState('Action');
 
   const handleTitleChange = event => {
     setBookTitle(event.target.value);
@@ -35,6 +35,7 @@ const BooksForm = ({ createBook }) => {
     });
     setBookCategory('Action');
     setBookTitle('');
+    document.querySelector('#bookTitleInput').value = '';
   };
 
   return (
@@ -42,7 +43,7 @@ const BooksForm = ({ createBook }) => {
       <form action="">
         <label htmlFor="bookTitle">
           Title
-          <input onChange={handleTitleChange} name="bookTitle" type="text" />
+          <input onChange={handleTitleChange} name="bookTitle" id="bookTitleInput" type="text" />
         </label>
         <label htmlFor="bookCategories">
           Categories
@@ -65,8 +66,5 @@ BooksForm.propTypes = {
 const mapDispatchToProps = dispatch => ({
   createBook: book => dispatch(createBook(book)),
 });
-
-// HANDLE SUBMIT FUNCTION SHOULD BUNDLE THE NEW BOOK TITLE AND CATEGORY STATES
-// AND FIRE OFF MAP TO DISPATCH
 
 export default connect(null, mapDispatchToProps)(BooksForm);

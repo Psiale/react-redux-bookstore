@@ -11,8 +11,6 @@ const initialState = {
 };
 
 const booksReducer = (state = initialState, action) => {
-  // eslint-disable-next-line no-console
-  console.log(action.payload);
   switch (action.type) {
     case CREATE_BOOK: return {
       ...state,
