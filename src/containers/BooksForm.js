@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/bookActions';
+import getRandomInt from '../utilities';
 
 const categories = [
   'Action',
@@ -10,7 +14,7 @@ const categories = [
   'Sci-Fi',
 ];
 
-const BooksForm = () => {
+const BooksForm = ({ createBook }) => {
   const [bookTitle, setBookTitle] = useState('');
   const [bookCategory, setBookCategory] = useState('');
 
@@ -22,37 +26,47 @@ const BooksForm = () => {
     setBookCategory(event.target.value);
   };
 
-  const handleSubmit = (state) => {
-    //save to redux state
-    return {
-      ...state,
-      title: '',
-      category: ''
-    }
-  }
+  const handleSubmit = event => {
+    event.preventDefault();
+    createBook({
+      id: getRandomInt(1, 999999),
+      title: bookTitle,
+      category: bookCategory,
+    });
+    setBookCategory('Action');
+    setBookTitle('');
+  };
 
   return (
     <>
       <form action="">
         <label htmlFor="bookTitle">
           Title
-          <input onChange={() => handleTitleChange} name="bookTitle" type="text" />
+          <input onChange={handleTitleChange} name="bookTitle" type="text" />
         </label>
         <label htmlFor="bookCategories">
           Categories
-          <select name="bookCategories" id="books">
+          <select onChange={handleCategoryChange} name="bookCategories" id="books">
             {
-            categories.map(category => <option onChange={() => handleCategoryChange} key={category}>{category}</option>)
+            categories.map(category => <option key={category}>{category}</option>)
           }
           </select>
         </label>
-        <button type="submit"> submit </button>
+        <button type="submit" onClick={handleSubmit}> submit </button>
       </form>
     </>
-  )
+  );
 };
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
 
 // HANDLE SUBMIT FUNCTION SHOULD BUNDLE THE NEW BOOK TITLE AND CATEGORY STATES
 // AND FIRE OFF MAP TO DISPATCH
 
-export default BooksForm;
+export default connect(null, mapDispatchToProps)(BooksForm);
