@@ -7,7 +7,7 @@ import Book from '../components/Book';
 const BooksList = props => {
   const { books, removeBook } = props;
 
-  const handleClick = id => {
+  const handleBookRemove = id => {
     removeBook(id);
   };
 
@@ -26,7 +26,7 @@ const BooksList = props => {
           <>
             <Book
               key={book.id}
-              removeBook={handleClick}
+              removeBook={handleBookRemove}
               book={{
                 id: book.id,
                 title: book.title,
