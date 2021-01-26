@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => {
+const Book = ({ book, removeBook }) => {
   const { id, title, category } = book;
 
   return (
@@ -9,6 +9,7 @@ const Book = ({ book }) => {
       <td>{id}</td>
       <td>{title}</td>
       <td>{category}</td>
+      <td><button onClick={() => removeBook(id)} id={id} type="button">Delete</button></td>
     </tr>
   );
 };
@@ -19,6 +20,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default Book;
