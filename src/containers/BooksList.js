@@ -27,21 +27,14 @@ const BooksList = props => {
   };
 
   return (
-    <>
+    <div className={styles.bookListContainer}>
       <div className={styles.titleBar}>
         <h1 className={styles.titleText}>Bookstore CMS</h1>
         <h3 className={styles.booksTitleText}>Books</h3>
         <CategoryFilter handleFilterChange={handleFilterChange} />
       </div>
-      <table>
-        <thead key={books.id}>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div>
+        <div>
           {
           getBooksFiltered(books, filter).map(book => (
             <>
@@ -57,9 +50,9 @@ const BooksList = props => {
             </>
           ))
         }
-        </tbody>
-      </table>
-    </>
+        </div>
+      </div>
+    </div>
   );
 };
 
