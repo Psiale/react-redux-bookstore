@@ -6,7 +6,7 @@ const initialState = {
 
 const filterReducer = (state = initialState, action) => {
 // eslint-disable-next-line no-console
-  console.log(`fuck this shit: ${action.payload}`);
+  console.log(`${state.filter}`);
   switch (action.type) {
     case CHANGE_FILTER:
       return {
