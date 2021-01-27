@@ -7,18 +7,22 @@ import CategoryComponent from '../components/CategoryComponent';
 import changeFilter from '../actions/filterActions';
 
 const BooksList = props => {
-  const { books, filter, removeBook } = props;
+  const {
+    books, filter, removeBook, changeFilter,
+  } = props;
 
   const handleBookRemove = id => {
     removeBook(id);
   };
 
   const handleFilterChange = event => {
+    // eslint-disable-next-line no-console
+    console.log('Am I been triggered?');
     changeFilter(event.target.value);
   };
 
   const getBooksFiltered = (arr, filter) => {
-    if (filter === 'All') {
+    if (filter === '') {
       return arr;
     }
     return arr.filter(book => book.category === filter);
@@ -67,6 +71,7 @@ BooksList.propTypes = {
   ).isRequired,
   filter: PropTypes.string.isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -75,8 +80,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  removeBook: book => dispatch(removeBook(book)),
-  changeFilter: category => dispatch(changeFilter(category)),
+  removeBook: book => {
+    dispatch(removeBook(book));
+  },
+  changeFilter: filter => {
+    dispatch(changeFilter(filter));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

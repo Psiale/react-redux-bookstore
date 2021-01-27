@@ -1,14 +1,18 @@
 import { CHANGE_FILTER } from '../types/bookTypes';
 
 const initialState = {
-  filter: 'ALL',
+  filter: 'All',
 };
 
 const filterReducer = (state = initialState, action) => {
-// eslint-disable-next-line no-console
-  console.log(`${state.filter}`);
   switch (action.type) {
     case CHANGE_FILTER:
+      if (action.payload === 'All') {
+        return {
+          ...state,
+          filter: '',
+        };
+      }
       return {
         ...state,
         filter: action.payload,
@@ -17,7 +21,7 @@ const filterReducer = (state = initialState, action) => {
     default:
       return {
         ...state,
-        filter: 'All',
+        filter: '',
       };
   }
 };
