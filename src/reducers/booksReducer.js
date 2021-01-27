@@ -4,9 +4,9 @@ import getRandomInt from '../utilities';
 
 const initialState = {
   books: [
-    book(getRandomInt(1, 999999), 'first', 'horror'),
-    book(getRandomInt(1, 999999), 'second', 'sci-fi'),
-    book(getRandomInt(1, 999999), 'third', 'comedy'),
+    book(getRandomInt(1, 999999), 'First', 'Horror'),
+    book(getRandomInt(1, 999999), 'Second', 'Sci-Fi'),
+    book(getRandomInt(1, 999999), 'Third', 'Comedy'),
   ],
 };
 
