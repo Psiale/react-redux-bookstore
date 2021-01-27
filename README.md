@@ -8,6 +8,10 @@ Iterating on the previous topics covered in React and most recently Redux, this 
 
 The premise of this project follows that Magic-Books Inc (a fictional company), has requested our help in creating a front-end application to help them organise and manage their bookstore. We will obtain the objective by building a fast, dynamic and responsive web app using React and Redux.
 
+## 🏴‍☠️🤮 Live Version
+
+Check the deployed [Project](https://areact-redux-bookstore.herokuapp.com)
+
 ## 🧬 Technologies & Languages Used
 
 - Node.js

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook } from '../actions/bookActions';
+import { createBook } from '../actions/index';
 import getRandomInt from '../utilities';
 
 const categories = [

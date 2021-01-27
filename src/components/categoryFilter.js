@@ -12,7 +12,7 @@ const categories = [
   'Sci-Fi',
 ];
 
-const CategoryComponent = ({ handleFilterChange }) => (
+const CategoryFilter = ({ handleFilterChange }) => (
   <>
     <select
       onChange={handleFilterChange}
@@ -26,8 +26,8 @@ const CategoryComponent = ({ handleFilterChange }) => (
   </>
 );
 
-CategoryComponent.propTypes = {
+CategoryFilter.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
 };
 
-export default CategoryComponent;
+export default CategoryFilter;

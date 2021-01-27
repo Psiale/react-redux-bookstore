@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { removeBook } from '../actions/bookActions';
+import { removeBook, changeFilter } from '../actions/index';
+import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
-import CategoryComponent from '../components/CategoryComponent';
-import changeFilter from '../actions/filterActions';
 
 const BooksList = props => {
   const {
@@ -16,8 +15,6 @@ const BooksList = props => {
   };
 
   const handleFilterChange = event => {
-    // eslint-disable-next-line no-console
-    console.log('Am I been triggered?');
     changeFilter(event.target.value);
   };
 
@@ -30,7 +27,7 @@ const BooksList = props => {
 
   return (
     <>
-      <CategoryComponent handleFilterChange={handleFilterChange} />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead key={books.id}>
           <tr>
