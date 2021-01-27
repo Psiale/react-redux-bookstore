@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
+import styles from './BooksList.module.css';
 
 const BooksList = props => {
   const {
@@ -27,7 +28,11 @@ const BooksList = props => {
 
   return (
     <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <div className={styles.titleBar}>
+        <h1 className={styles.titleText}>Bookstore CMS</h1>
+        <h3 className={styles.booksTitleText}>Books</h3>
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
       <table>
         <thead key={books.id}>
           <tr>

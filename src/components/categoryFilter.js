@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './CategoryFilter.module.css';
 
 const categories = [
   'All',
@@ -13,9 +14,10 @@ const categories = [
 ];
 
 const CategoryFilter = ({ handleFilterChange }) => (
-  <>
+  <div>
     <select
       onChange={handleFilterChange}
+      className={styles.categoriesSelector}
       name="bookCategories"
       id="booksCategories"
     >
@@ -23,7 +25,7 @@ const CategoryFilter = ({ handleFilterChange }) => (
         <option key={category}>{category}</option>
       ))}
     </select>
-  </>
+  </div>
 );
 
 CategoryFilter.propTypes = {
