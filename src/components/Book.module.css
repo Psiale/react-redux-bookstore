@@ -6,7 +6,6 @@
 .wrapper {
   width: 100px; /* Set the size of the progress bar */
   height: 100px;
-  position: absolute; /* Enable clipping */
   clip: rect(0, 100px, 100px, 50px); /* Hide half of the progress bar */
 }
 
@@ -16,7 +15,6 @@
   border: 10px solid green;
   border-radius: 50px;
   position: absolute;
-  clip-path: rect(0, 50, 100px, 0);
 }
 
 .bookContainer {
@@ -25,7 +23,7 @@
   margin: 37px 100px 0;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
 }
@@ -45,5 +43,95 @@
   color: #121212;
 }
 
-/* working on the style of the book component, currently doing the first row
-book/info */
+.percentComplete {
+  width: 68px;
+  height: 39px;
+  margin: 1px 92px 0 11px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Completed {
+  width: 80px;
+  height: 18px;
+  margin: 7px 79px 12px 12px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progressInfoContainer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.progressInfoChild {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-bottom: 22px;
+}
+
+.bookCurrentState {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.currentChapter {
+  width: 160px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.currentLesson {
+  width: 280px;
+  height: 21px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.rectangle2 {
+  width: 184px;
+  height: 33px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+  text-align: center;
+  color: #fff;
+}

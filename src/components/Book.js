@@ -19,20 +19,20 @@ const Book = ({ book, removeBook }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.progressInfoContainer}>
         <div className={styles.wrapper}>
           <div className={styles.circle} />
           <div className={styles.circle} />
         </div>
-        <div className="progress-info-container">
-          <h2>64%</h2>
+        <div className={styles.progressInfoChild}>
+          <h2 className={styles.percentComplete}>64%</h2>
           <p>Completed</p>
         </div>
       </div>
-      <div>
-        <p>current chapter</p>
-        <strong>chapter 17</strong>
-        <button type="button">UPDATE PROGRESS</button>
+      <div className={styles.bookCurrentState}>
+        <p className={styles.currentChapter}>current chapter</p>
+        <p className={styles.currentLesson}>Chapter 17: A lesson learned</p>
+        <button className={styles.rectangle2} type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
