@@ -45,6 +45,7 @@ const BooksList = props => {
                   id: book.id,
                   title: book.title,
                   category: book.category,
+                  author: book.author,
                 }}
               />
             </>
