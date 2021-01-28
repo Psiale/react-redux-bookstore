@@ -1,0 +1,10 @@
+.categoriesSelector {
+  width: 185px;
+  height: 20px;
+  margin: 18px 500px 11px 41px;
+  opacity: 0.5;
+  font: normal 13px/13px 'Montserrat', sans-serif, monospace;
+  letter-spacing: 1.9px;
+  color: #121212;
+  border: 1px solid #606060;
+}

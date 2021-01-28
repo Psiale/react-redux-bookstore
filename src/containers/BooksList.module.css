@@ -1,0 +1,61 @@
+.book-list-container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.bookList {
+  height: 640px;
+  overflow-y: scroll;
+}
+
+.bookInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleBar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  height: 95px;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.titleText {
+  width: 240px;
+  height: 37px;
+  margin: 6px 47px 2px 0;
+  color: #0290ff;
+  font: bold 30px/30px 'Montserrat', sans-serif, monospace;
+}
+
+.booksTitleText {
+  width: 59px;
+  height: 16px;
+  margin: 18px 41px 11px 0;
+  font: normal 13px/13px 'Montserrat', sans-serif, monospace;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.loginButton {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  margin-left: auto;
+  padding: 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.loginProfileImage {
+  background: transparent;
+}
