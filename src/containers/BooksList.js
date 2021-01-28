@@ -5,6 +5,7 @@ import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
 import styles from './BooksList.module.css';
+import profile from '../assets/img/profile.png';
 
 const BooksList = props => {
   const {
@@ -32,6 +33,9 @@ const BooksList = props => {
         <h1 className={styles.titleText}>Bookstore CMS</h1>
         <h3 className={styles.booksTitleText}>Books</h3>
         <CategoryFilter handleFilterChange={handleFilterChange} />
+        <div className={styles.loginButton}>
+          <img src={profile} alt="login" className={styles.loginProfileImage} />
+        </div>
       </div>
       <div className={styles.bookList}>
         <div>

@@ -43,3 +43,19 @@
   letter-spacing: 1.9px;
   color: #121212;
 }
+
+.loginButton {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  margin-left: auto;
+  padding: 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.loginProfileImage {
+  background: transparent;
+}
