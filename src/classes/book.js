@@ -1,2 +1,4 @@
-const Book = (id, title, category) => ({ id, title, category });
+const Book = (id, title, category, author) => ({
+  id, title, category, author,
+});
 export default Book;

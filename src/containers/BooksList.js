@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/categoryFilter';
 import Book from '../components/Book';
+import styles from './BooksList.module.css';
+import profile from '../assets/img/profile.png';
 
 const BooksList = props => {
   const {
@@ -26,17 +28,17 @@ const BooksList = props => {
   };
 
   return (
-    <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead key={books.id}>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
+    <div className={styles.bookListContainer}>
+      <div className={styles.titleBar}>
+        <h1 className={styles.titleText}>Bookstore CMS</h1>
+        <h3 className={styles.booksTitleText}>Books</h3>
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+        <div className={styles.loginButton}>
+          <img src={profile} alt="login" className={styles.loginProfileImage} />
+        </div>
+      </div>
+      <div className={styles.bookList}>
+        <div>
           {
           getBooksFiltered(books, filter).map(book => (
             <>
@@ -47,14 +49,15 @@ const BooksList = props => {
                   id: book.id,
                   title: book.title,
                   category: book.category,
+                  author: book.author,
                 }}
               />
             </>
           ))
         }
-        </tbody>
-      </table>
-    </>
+        </div>
+      </div>
+    </div>
   );
 };
 

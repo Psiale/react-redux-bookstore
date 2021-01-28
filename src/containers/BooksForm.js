@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 import getRandomInt from '../utilities';
+import styles from './BooksForm.module.css';
 
 const categories = [
   'Action',
@@ -39,23 +40,20 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <>
-      <form action="">
-        <label htmlFor="bookTitle">
-          Title
-          <input onChange={handleTitleChange} name="bookTitle" id="bookTitleInput" type="text" />
-        </label>
-        <label htmlFor="bookCategories">
-          Categories
-          <select onChange={handleCategoryChange} name="bookCategories" id="books">
-            {
-            categories.map(category => <option key={category}>{category}</option>)
-          }
-          </select>
-        </label>
-        <button type="submit" onClick={handleSubmit}> submit </button>
-      </form>
-    </>
+    <form action="" className={styles.formContainer}>
+      <div className={styles.formTitleDiv}>
+        <h3 className={styles.formTitle}>Add New Book</h3>
+      </div>
+      <div className={styles.formInputsDiv}>
+        <input onChange={handleTitleChange} placeholder="Book Title" className={styles.formTitleInput} name="bookTitle" id="bookTitleInput" type="text" />
+        <select onChange={handleCategoryChange} className={styles.formCategoryInput} name="bookCategories" id="books">
+          {
+          categories.map(category => <option key={category}>{category}</option>)
+        }
+        </select>
+        <button type="submit" onClick={handleSubmit} className={styles.formSubmit}>Add Book</button>
+      </div>
+    </form>
   );
 };
 
