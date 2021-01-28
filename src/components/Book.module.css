@@ -4,15 +4,16 @@
 }
 
 .wrapper {
-  width: 100px; /* Set the size of the progress bar */
+  position: relative;
+  width: 100px;
   height: 100px;
-  clip: rect(0, 100px, 100px, 50px); /* Hide half of the progress bar */
+  clip: rect(0, 100px, 100px, 50px);
 }
 
 .circle {
   width: 80px;
   height: 80px;
-  border: 10px solid green;
+  border: 6px solid #0290ff;
   border-radius: 50px;
   position: absolute;
 }

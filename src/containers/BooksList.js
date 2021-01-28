@@ -33,7 +33,7 @@ const BooksList = props => {
         <h3 className={styles.booksTitleText}>Books</h3>
         <CategoryFilter handleFilterChange={handleFilterChange} />
       </div>
-      <div>
+      <div className={styles.bookList}>
         <div>
           {
           getBooksFiltered(books, filter).map(book => (

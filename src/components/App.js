@@ -4,9 +4,11 @@ import BooksList from '../containers/BooksList';
 import styles from './App.module.css';
 
 const App = () => (
-  <div className={styles.appContainer}>
-    <BooksList />
-    <BooksForm />
+  <div className={styles.pageContainer}>
+    <div className={styles.appContainer}>
+      <BooksList />
+      <BooksForm />
+    </div>
   </div>
 );
 
